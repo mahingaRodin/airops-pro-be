@@ -1,0 +1,10 @@
+server:
+  port: 5004
+spring:
+  application:
+    name: location-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/airline_location_db
+    username: postgres
+    password: 12345
