@@ -1,4 +1,4 @@
-package com.stack.location_service.controller;
+package com.stack.location_service.controllers;
 
 
 import com.stack.payloads.responses.ApiResponse;
