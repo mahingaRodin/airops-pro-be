@@ -5,6 +5,8 @@
     <groupId>com.stack</groupId>
     <artifactId>AirLine-System</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <name>AirLine Sys</name>
     <description>AirLine GDS Microservices Parent</description>
 
@@ -20,8 +22,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Framework versions - single source of truth -->
-        <spring.boot.version>4.0.2</spring.boot.version>
-        <spring.cloud.version>2025.1.0</spring.cloud.version>
+        <spring.boot.version>4.0.6</spring.boot.version>
+        <spring.cloud.version>2025.1.1</spring.cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -43,6 +45,7 @@
         </dependencies>
     </dependencyManagement>
 
+
     <build>
         <pluginManagement>
             <plugins>
@@ -56,6 +59,11 @@
                     <parameters>true</parameters>
                 </configuration>
             </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
