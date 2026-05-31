@@ -22,16 +22,30 @@
 	<!-- Dependencies -->
 	<dependencies>
 
-		<!--Common Lib Service -->
+		<!-- Common Lib Service -->
 		<dependency>
 			<groupId>com.stack</groupId>
 			<artifactId>common-lib</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
 		<!-- REST APIs / Controllers -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- Swagger UI / OpenAPI documentation -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>3.0.3</version>
+		</dependency>
+
+		<!-- Validation support for @Valid and jakarta.validation -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 
 		<!-- Spring Data JPA / Hibernate -->
@@ -51,7 +65,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-<!--			<optional>true</optional>-->
+			<optional>true</optional>
 		</dependency>
 
 		<!-- Spring Boot DevTools -->
@@ -62,10 +76,17 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- Testing -->
+		<!-- General Spring Boot testing: JUnit, Mockito, AssertJ, etc. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Spring Boot 4 MVC test support: @WebMvcTest, MockMvc config -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 

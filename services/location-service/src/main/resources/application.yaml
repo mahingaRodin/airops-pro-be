@@ -8,3 +8,15 @@ spring:
     url: jdbc:postgresql://localhost:5432/airline_location_db
     username: postgres
     password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
